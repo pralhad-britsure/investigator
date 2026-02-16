@@ -1,5 +1,5 @@
 from sqlalchemy import Boolean
-from sqlalchemy import Column, Integer, String, Date, BigInteger, ForeignKey, DateTime, text
+from sqlalchemy import Column,Text, Integer, String, Date, BigInteger, ForeignKey, DateTime, text
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from datetime import datetime
@@ -44,8 +44,8 @@ class ProfessionalHistory(Base):
     type_of_relieving_1 = Column(String(255), nullable=True)
     date_of_relieving_1 = Column(Date)
     reported_by_1 = Column(String(150))
-    relieving_remark_1 = Column(String(500))
-    type_of_allegation_1 = Column(String(100), nullable=True)
+    relieving_remark_1 = Column(Text)
+    type_of_allegation_1 = Column(Text, nullable=True)
     agency_name_2 = Column(String(150))
     agency_owner_2 = Column(String(150))
     reporting_head_2 = Column(String(150))
